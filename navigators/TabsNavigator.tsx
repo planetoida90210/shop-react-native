@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { HomeScreen } from "../screens";
+import { CartScreen, HomeScreen, PaymentScreen, ProfileScreen } from "../screens";
 
 export type TabsStackParamList = {
   Home: undefined;
@@ -15,10 +15,10 @@ const TabStack = createBottomTabNavigator<TabsStackParamList>();
 const TabsNavigator = () => {
   return (
     <TabStack.Navigator>
-      <TabStack.Screen name="Home" component={HomeScreen} />
-      <TabStack.Screen name="Cart" component={HomeScreen} />
-      <TabStack.Screen name="Payment" component={HomeScreen} />
-      <TabStack.Screen name="Profile" component={HomeScreen} />
+      <TabStack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+      <TabStack.Screen name="Cart" component={CartScreen} options={{ headerShown: false }} />
+      <TabStack.Screen name="Payment" component={PaymentScreen} options={{ headerShown: false }} />
+      <TabStack.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
     </TabStack.Navigator>
   );
 };
