@@ -14,7 +14,7 @@ const TabStack = createBottomTabNavigator<TabsStackParamList>();
 
 const TabsNavigator = () => {
   return (
-    <TabStack.Navigator>
+    <TabStack.Navigator screenOptions={{ tabBarShowLabel: false }}>
       <TabStack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
       <TabStack.Screen name="Cart" component={CartScreen} options={{ headerShown: false }} />
       <TabStack.Screen name="Payment" component={PaymentScreen} options={{ headerShown: false }} />
