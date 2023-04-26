@@ -4,6 +4,7 @@ import Icons from "@expo/vector-icons/MaterialIcons";
 
 //external imports
 import { Image1, ProfileUser } from "../assets/images";
+import { CollectionCard } from "../components";
 
 const HomeScreen = () => {
   return (
@@ -35,16 +36,20 @@ const HomeScreen = () => {
         {/* Grid Collection View */}
         <View className="px-7">
           {/* Title Bar */}
-          <View className="flex-row items-center justify-between">
+          <View className="flex-row items-center justify-between mb-2">
             <Text className="text-xl font-semibold">New Collections</Text>
             <TouchableOpacity>
               <Text className="text-black/60">See All</Text>
             </TouchableOpacity>
           </View>
-          <View className="flex-row">
+          <View className="flex-row h-[200px] gap-1">
             {/* Card */}
-            <View className="flex-1 h-[200px] relative overflow-hidden">
-              <Image source={Image1} resizeMode="cover" className="w-[200px] h-[200px] rounded-xl flex-1" />
+            <View className="flex-1">
+              <CollectionCard />
+            </View>
+            <View className="flex-1">
+              <CollectionCard />
+              <CollectionCard />
             </View>
           </View>
         </View>
